@@ -1,0 +1,52 @@
+/* BODY Styles */
+
+body {
+  position: relative;
+  font-family: sans-serif;
+  /* cursor: url('/assets/images/Cursor_Circle_Open.png'), auto; */
+  /* a:hover { */
+    /* https://css-tricks.com/almanac/properties/c/cursor/ */
+    /* cursor: url('/assets/images/Cursor_Third-Eye.png'), auto; */
+    /* Superseded by pointing (triangular) custom cursor */
+    /* cursor: url('/assets/images/Cursor_Circle_Closed.png') 15 15, auto; */ 
+  /* } */
+  /* input { */
+    /* https://css-tricks.com/almanac/properties/c/cursor/ */
+    /* cursor: url('/assets/images/Cursor_Third-Eye.png'), auto;  */
+  /* } */
+
+}
+
+main {
+  min-height: 100vh;
+  margin-top: 10vh;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 1) 0% /*top-left color*/, rgba(119, 212, 255, 0.121) 50% /*middle color*/, rgba(119, 212, 255, 0.5) 100% /*bottom-right color*/),
+              linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1))/*"faked" black background make sure to add last or it will appear before the transparent/colored layer*/;
+  /* background-image: url(/assets/images/meandering_stream.jpg); */
+}
+
+.mainimg {
+  margin-top: -40vh;
+  margin-left: 0px;
+  /* opacity: 0.50; */
+  /* height: 100vh; */
+  /* width: 100vw; */
+  /* transform: rotate(180deg); */
+}
+
+.backgroundimg {
+  box-sizing: border-box;
+  /* width:90vw; */
+  height:200vh;
+  width: 100vw;
+
+  border: none;
+  margin-top: -50vh;
+  /* padding-top: -50vh; */
+  /* padding: 0px; */
+
+  background: url(/assets/images/meandering_stream.jpg) center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}

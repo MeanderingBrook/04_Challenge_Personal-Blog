@@ -1,0 +1,98 @@
+/* GLOBAL Styles */
+
+* {
+  margin:0;
+  padding:0;  
+}
+
+
+/* HEADER */
+
+header {
+  top: 0vh;
+  position: fixed;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1vh;
+  text-align: center;
+  color: rgba(0,0,121,1);
+}
+
+.headerimg {
+  margin-left: 0;
+  width: 60px;
+  height: 90px;
+}
+
+/* NAV MENU */
+
+.trigger {
+    margin-top: 5vh;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    border: 2px solid rgba(0,212,255,1);
+    border-radius: 15px; /* Menu Icon border corner rounding */
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.bars {
+  width: 40px; /* Menu Icon size */
+  cursor: pointer;
+}
+
+/* .bars:hover {
+  cursor: url('/assets/images/Cursor_Third-Eye.png') 5 5, auto; 
+} */
+
+.active {
+  float: right;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 10px; /* Menu Icon border corner rounding */
+}
+
+.bars .line {
+  fill: none;
+  stroke: rgba(0,212,255,1);
+  stroke-width: 4;
+  stroke-linecap: square;
+  transition: stroke-dasharray 400ms,  stroke-dashoffset 400ms;
+}
+
+.bars .line.top {
+  stroke-dasharray: 40 172;
+}
+
+.bars .line.middle {
+  stroke-dasharray: 40 111;
+}
+
+.bars .line.bottom {
+  stroke-dasharray: 40 172;
+}
+
+.bars.active .top {
+  stroke-width: 6;
+  stroke-dashoffset: -132px;
+  stroke: rgba(0,212,255,1);
+}
+
+.bars.active .middle {
+  stroke-width: 6;
+  stroke-dashoffset: -71px;
+  stroke: rgba(0,212,255,1);
+}
+
+.bars.active .bottom {
+  stroke-width: 6;
+  stroke-dashoffset: -132px;
+  stroke: rgba(0,212,255,1);
+}
