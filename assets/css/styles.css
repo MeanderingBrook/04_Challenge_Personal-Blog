@@ -5,13 +5,31 @@
   padding:0;  
 }
 
+/* BODY */
+
+body {
+  position: relative;
+  font-family: sans-serif;
+  /* cursor: url('/assets/images/Cursor_Circle_Open.png'), auto; */
+  /* a:hover { */
+    /* https://css-tricks.com/almanac/properties/c/cursor/ */
+    /* cursor: url('/assets/images/Cursor_Third-Eye.png'), auto; */
+  /* } */
+  /* input { */
+    /* https://css-tricks.com/almanac/properties/c/cursor/ */
+    /* cursor: url('/assets/images/Cursor_Third-Eye.png'), auto;  */
+  /* } */
+  background-image: url(/assets/images/meandering_stream_v2.0.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 /* HEADER */
 
 header {
   top: 0vh;
   position: fixed;
-  height: 10vh;
+  height: 8vh;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -20,12 +38,21 @@ header {
   padding-top: 1vh;
   text-align: center;
   color: rgba(0,0,121,1);
+  background-color: white;
+}
+
+#headercontent {
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  /* WAVEY TEXT FOR LATER: https://codepen.io/zachkrall/pen/MWWGMPx */
+  /* CURVED TEXT FOR LATER: https://css-tricks.com/snippets/svg/curved-text-along-path/ */
 }
 
 .headerimg {
   margin-left: 0;
-  width: 60px;
-  height: 90px;
+  max-width: 50%;
+  max-height: 50%
 }
 
 /* NAV MENU */
@@ -35,7 +62,8 @@ header {
     z-index: 2;
     left: 50%;
     top: 50%;
-    border: 2px solid rgba(0,212,255,1);
+    border: 2px solid rgb(38, 151, 192);
+    /* border: 2px solid rgba(0,212,255,1); */
     border-radius: 15px; /* Menu Icon border corner rounding */
     transform: translateX(-50%) translateY(-50%);
 }
@@ -95,4 +123,25 @@ header {
   stroke-width: 6;
   stroke-dashoffset: -132px;
   stroke: rgba(0,212,255,1);
+}
+
+main {
+  min-height: 100vh;
+  margin-top: 14vh;
+}
+
+/* FOOTER */
+
+footer {
+  /* https://www.w3schools.com/howto/howto_css_fixed_footer.asp */
+  /* https://css-tricks.com/couple-takes-sticky-footer/ */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 1vh;
+  width: 100%;
+  background-color: rgb(38, 151, 192);
+  color: white;
+  text-align: center;
+  border-top: 0.25vh solid aliceblue;
 }
