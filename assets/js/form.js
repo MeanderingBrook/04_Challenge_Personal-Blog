@@ -1,10 +1,10 @@
 // Reference: https://blog.logrocket.com/localstorage-javascript-complete-guide/
 
-// const ul = document.querySelector('ul');
-// const input = document.getElementById('user-name')
+const ul = document.querySelector('ul');
+const input = document.getElementById('user-name')
 
 // Loads existing User Names from Local Storage to postsArray, else: empty Array
-// let postsArray = localStorage.getItem('userNames') ? JSON.parse(localStorage.getItem('userNames')) : [];
+let postsArray = localStorage.getItem('userNames') ? JSON.parse(localStorage.getItem('userNames')) : [];
 
 // Creates <li> for each User Name, and adds to <ul>
 postsArray.forEach(addUserName);
@@ -28,10 +28,36 @@ function del() {
 }
 
 
-const ul = document.querySelector('ul');
-const input = document.getElementById('post');
+// const ul = document.querySelector('ul');
+// const input = document.getElementById('post');
 
-let postsArray = localStorage.getItem('userPosts') ? JSON.parse(localStorage.getItem('userPosts')) : [];
+// let postsArray = localStorage.getItem('userPosts') ? JSON.parse(localStorage.getItem('userPosts')) : [];
 
-postsArray.forEach(addUserPost);
-function addUserPost()
+
+// console.log(postsArray);
+// console.log(userPost);
+
+// postsArray.forEach(addUserPost);
+// function addUserPost(userPost) {
+//   const li = document.createElement('li')
+  
+//   console.log(userPost);
+
+//   li.textContent = userPost;
+//   ul.appendChild(li);
+// }
+
+// function add() {
+
+//   let userPost = {};
+
+//   userPost.username = input.username;
+//   userPost.posttitle = input.posttitle;
+
+//   postsArray.push(userPost);
+//   localStorage.setItem('userPosts', JSON.stringify(postsArray));
+//   addUserPost(userPost);
+//   input.value = '';
+
+//   return userPost;
+// }
