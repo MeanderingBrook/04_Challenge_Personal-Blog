@@ -5,6 +5,36 @@
   padding:0;  
 }
 
+
+/* HEADER */
+
+/* NAV MENU */
+
+.site-nav {
+  overflow: hidden;
+  position: fixed;
+  margin-left: 90vw;
+  text-align: center;
+}
+
+.site-nav #site-links {
+  display: none;
+}
+
+.site-nav a {
+  display: block;
+  text-decoration: none;
+  color: rgb(38, 151, 192);
+}
+
+.site-nav a:hover {
+  content: "";
+  color: rgb(0, 0, 128);
+  text-align: right;
+  border-bottom: 1rem solid rgb(0, 0, 128, 0.75);
+}
+
+
 /* BODY */
 
 body {
@@ -37,7 +67,7 @@ header {
   align-items: center;
   padding-top: 1vh;
   text-align: center;
-  color: rgba(0,0,121,1);
+  color: rgba(0,0,128,1);
   background-color: white;
 }
 

@@ -1,11 +1,7 @@
-/* BODY Styles */
+/* HEADER */
 
-/* body {
-  background-image: url(/assets/images/meandering_stream_v2.0.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-} */
 
+/* BODY */
 
 /* JavaScript-Generated HTML Styles */
 
@@ -22,7 +18,7 @@
   padding-left: 40px;
   padding-right: 40px;
   font-size: 18px;
-  color: hsl(206, 17%, 28%);
+  color: rgb(59, 73, 84);
 }
 
 .summary h2 {
