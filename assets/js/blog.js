@@ -105,5 +105,16 @@ function addPost(object) {
 function del() {
   localStorage.clear();
   ul.innerHTML = "";
-  postsArray = [];
+  itemsArray = [];
+  // location.reload();
+  // document.location.href = "./";
+  // this.location.reload();
+
+  // location.replace(location.href);
+
+  // window.location = "./";
+  // window.location.reload();
+
+  // document.location.href = "./";
+  // document.location.reload();
 }

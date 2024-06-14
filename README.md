@@ -108,8 +108,10 @@ https://meanderingbrook.github.io/04_Challenge_Personal-Blog/
 
 ## Application Screenshots
 
-![Employee Payroll Tracker: Populated Tracker Screenshot] (/assets/images/Employee Payroll Tracker_Screenshot-01.png "Populated Tracker Screenshot")
+![Personal Blog: Populated Home Page Screenshot - Light Mode](./assets/images/Personal-Blog_Home-Light-Mode.png?raw=true "Populated Personal Blog - Home - Light Mode")
 
-![Employee Payroll Tracker: Populated Tracker Screenshot with Console Log (1 of 2)] (/assets/images/Employee Payroll Tracker_Screenshot-02.png?raw=true "Populated Tracker Screenshot with Console Log")
+![Personal Blog: Populated Home Page Screenshot - Dark Mode](./assets/images/Personal-Blog_Home-Dark-Mode.png?raw=true "Populated Personal Blog - Home - Dark Mode")
 
-![Employee Payroll Tracker: Populated Tracker Screenshot with Console Log (2 of 2)] (/assets/images/Employee Payroll Tracker_Screenshot-02.png?raw=true "Populated Tracker Screenshot with Console Log")
+![Personal Blog: Populated Form Page Screenshot - Light Mode](./assets/images/Personal-Blog_Form-Light-Mode.png?raw=true "Populated Personal Blog - Form - Light Mode")
+
+![Personal Blog: Populated Form Page Screenshot - Dark Mode](./assets/images/Personal-Blog_Form-Dark-Mode.png?raw=true "Populated Personal Blog - Form - Dark Mode")
