@@ -73,7 +73,7 @@ header {
 }
 
 /* .bars:hover {
-  cursor: url('/assets/images/Cursor_Third-Eye.png') 5 5, auto; 
+  cursor: url('./assets/images/Cursor_Third-Eye.png') 5 5, auto; 
 } */
 
 .active {
@@ -163,15 +163,6 @@ body {
   margin-bottom: 5vh;
   position: relative;
   font-family: sans-serif;
-  /* cursor: url('/assets/images/Cursor_Circle_Open.png'), auto; */
-  /* a:hover { */
-    /* https://css-tricks.com/almanac/properties/c/cursor/ */
-    /* cursor: url('/assets/images/Cursor_Third-Eye.png'), auto; */
-  /* } */
-  /* input { */
-    /* https://css-tricks.com/almanac/properties/c/cursor/ */
-    /* cursor: url('/assets/images/Cursor_Third-Eye.png'), auto;  */
-  /* } */
   background-image: url(/assets/images/meandering_stream_v2.0.jpg);  /* iStock */
   background-repeat: no-repeat;
   background-position: center;
@@ -209,8 +200,6 @@ body {
 
 footer {
   position: absolute;
-  /* left: 0; */
-  /* bottom: 0; */
   margin-bottom: 0vh;
   padding: 1vh;
   width: 100%;
@@ -250,20 +239,16 @@ footer {
 /* DARK MODE */
 
 .dark-mode {
-  background-image: linear-gradient(to bottom, rgb(64, 64, 64, 1.0), rgb(64, 64, 64, 0.75), rgb(64, 64, 64, 0.50));
+  background-image: linear-gradient(to bottom, rgb(64, 64, 64, 1.0), rgb(64, 64, 64, 0.90), rgb(64, 64, 64, 0.80));
   color: rgb(255, 255, 255);
   background-color: rgb(255, 255, 255); 
 }
 
 .dark-mode a {
-  /* background-image: linear-gradient(to bottom, rgb(64, 64, 64, 1.0), rgb(64, 64, 64, 0.75), rgb(64, 64, 64, 0.50)); */
   color: rgb(255, 255, 255);
-  /* background-color: white;  */
 }
 
 .dark-mode a:hover {
-  /* content: ""; */
   color: rgb(255, 255, 255);
-  /* text-align: right; */
   border-bottom: 1rem solid rgb(255, 255, 255);
 }
