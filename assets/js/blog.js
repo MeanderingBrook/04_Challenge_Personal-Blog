@@ -1,4 +1,4 @@
-// Logo Page Reload
+// Logo Page Reload Function
 function homeReload() {
   location.reload();
 }
@@ -18,54 +18,6 @@ function navMenuDisplayHome() {
 }
 
 
-// THIS WORKS >> 
-// Load Blog Posts from Local Storage on load >>
-
-// Set Constant for target HTML Element to which Blog Posts will be added
-// const targetDiv = document.getElementById('blogPosts')
-
-// Loads existing User Names from Local Storage to permanent Array (postsArray), else: empty Array
-// let postsArray = localStorage.getItem('blogPosts1') ? JSON.parse(localStorage.getItem('blogPosts1')) : [];
-
-// Creates <li> for each User Input Object, and adds to <ul>
-// postsArray.forEach(addPost);
-// function addPost(text) {
-
-//   let textString = JSON.stringify(text);
-
-//   const post = document.createElement('li')
-//   post.textContent = textString;
-//   targetDiv.appendChild(post);
-// }
-// THIS WORKS <<
-
-
-// TRIAL: THIS WORKS TOO >> 
-// Load Blog Posts from Local Storage on load >>
-
-// Set Constant for target HTML Element to which Blog Posts will be added
-// const targetDiv = document.getElementById('blogPosts')
-
-// Loads existing User Names from Local Storage to permanent Array (postsArray), else: empty Array
-// let postsArray = localStorage.getItem('blogPosts1') ? JSON.parse(localStorage.getItem('blogPosts1')) : [];
-
-// Creates <div> for each User Input Object, and adds to <ul>
-// postsArray.forEach(addPost);
-// function addPost(text) {
-
-//   let textString = JSON.stringify(text);
-//   console.log(textString);
-
-//   const post = document.createElement('div')
-//   post.classList.add('card');
-//   post.textContent = textString;
-//   targetDiv.appendChild(post);
-// }
-// << TRIAL: THIS WORKS TOO
-
-
-
-// TRIAL >> 
 // Load Blog Posts from Local Storage on load >>
 
 // Set Constant for target HTML Element to which Blog Posts will be added
@@ -83,6 +35,7 @@ function addPost(object) {
   let postTitleNode = object.postTitle;
   let postContentNode = object.postContent;
 
+  // NOT USED: Pulls in data as Object now
   // let textString = JSON.stringify(text);
   // console.log(textString);
 
@@ -155,11 +108,12 @@ function addPost(object) {
   userNameDiv.appendChild(userNamePara);
   // << User Name
 
-
-
-  // const post = document.createElement('div')
-  // post.classList.add('card');
-  // post.textContent = textString;
-  // targetDiv.appendChild(post);
 }
-// << TRIAL
+
+
+// Clears Local Storage (postArray) of all User Input values
+function del() {
+  localStorage.clear();
+  ul.innerHTML = '';
+  postsArray = [];
+}

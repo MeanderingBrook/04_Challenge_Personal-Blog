@@ -1,10 +1,15 @@
 /* HEADER */
 
-
 /* BODY */
 
-/* JavaScript-Generated HTML Styles */
+main {
+  min-height: 100vh;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
 
+
+/* JavaScript-Generated HTML Styles */
 .card {
   margin: 1vh auto;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -14,7 +19,7 @@
   padding: 20px 40px;
   background-color: rgb(255, 255, 255, 0.90);
   font-size: 18px;
-  color: rgb(59, 73, 84);
+  color: rgba(0,0,128,1);
 }
 
 .elementDiv {
@@ -30,34 +35,21 @@
   padding-bottom: 1.50vh;
 }
 
-.titleHeader {
-  /* margin-right: 0vw;  */
-  color: aqua;
-}
+/* .titleHeader {
+} */
 
 #postContentDiv {
-  margin-bottom: 4vh;
+  margin-bottom: 4.0vh;
   min-height: 10vh;
   border-bottom: 1px solid rgb(0, 0, 128,0.25);
   padding-bottom: 1.50vh;
 }
 
-.contentHeader {
-  margin-right: 50px;
-  color: orangered;
-}
-
-.userHeader {
-  color: fuchsia;
-}
+/* .contentHeader {
+} */
 
 .card h4 {
-  margin-right: 1.00vw;
-  /* color: red; */
-}
-
-.card p {
-  color: green;
+  margin-right: 2.0vw;
 }
 
 .card-header::after {
@@ -68,11 +60,11 @@
   background: #e7e9eb;
 }
 
-.card-body {
-  min-height: 100px;
+/* .userHeader {
+} */
+
+.dark-mode {
+  background-image: linear-gradient(to bottom, rgb(64, 64, 64, 1.0), rgb(64, 64, 64, 0.75), rgb(64, 64, 64, 0.50));
+  color: white;
 }
-
-
-
-
 
