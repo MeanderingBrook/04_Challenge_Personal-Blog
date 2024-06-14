@@ -18,8 +18,7 @@ function navMenuDisplayHome() {
 }
 
 
-// Load Blog Posts from Local Storage on load >>
-
+// Loads Blog Posts from Local Storage on Home Page load to individual Cards >>
 // Set Constant for target HTML Element to which Blog Posts will be added
 const targetDiv = document.getElementById('blogPosts')
 
@@ -48,43 +47,43 @@ function addPost(object) {
 
   // Post Title >> 
   // Creates <div> to hold Blog Post - Post Title
-  const postTitleDiv = document.createElement('div');
-  postTitleDiv.classList.add('elementDiv');
-  postTitleDiv.setAttribute('id', 'postTitleDiv');
-  postDiv.appendChild(postTitleDiv);
+  const titleDiv = document.createElement('div');
+  titleDiv.classList.add('elementDiv');
+  titleDiv.setAttribute('id', 'titleDiv');
+  postDiv.appendChild(titleDiv);
 
   // Creates <h4> to hold Blog Post - Post Title
   const postTitleHeader = document.createElement('h4');
   postTitleHeader.classList.add('titleHeader')
   postTitleHeader.setAttribute('id', 'postTitleHeader');
   postTitleHeader.textContent = 'Post Title';
-  postTitleDiv.appendChild(postTitleHeader);
+  titleDiv.appendChild(postTitleHeader);
 
   // Creates <p> to hold Blog Post - Post Title
   const postTitlePara = document.createElement('p');
   postTitlePara.textContent = postTitleNode;
-  postTitleDiv.appendChild(postTitlePara);
+  titleDiv.appendChild(postTitlePara);
   // << Post Title
 
 
   // Post Content >>
   // Creates <div> to hold Blog Post - Post Content
-  const postContentDiv = document.createElement('div');
-  postContentDiv.classList.add('elementDiv');
-  postContentDiv.setAttribute('id', 'postContentDiv');
-  postDiv.appendChild(postContentDiv);
+  const contentDiv = document.createElement('div');
+  contentDiv.classList.add('elementDiv');
+  contentDiv.setAttribute('id', 'contentDiv');
+  postDiv.appendChild(contentDiv);
 
   // Creates <h4> to hold Blog Post - Post Content
   const postContentHeader = document.createElement('h4');
   postContentHeader.classList.add('contentHeader')
   postContentHeader.setAttribute('id', 'postContentHeader');
   postContentHeader.textContent = 'Post Content';
-  postContentDiv.appendChild(postContentHeader);
+  contentDiv.appendChild(postContentHeader);
 
   // Creates <p> to hold Blog Post - Post Content
   const postContentPara = document.createElement('p');
   postContentPara.textContent = postContentNode;
-  postContentDiv.appendChild(postContentPara);
+  contentDiv.appendChild(postContentPara);
   // << Post Content
 
 
@@ -107,11 +106,10 @@ function addPost(object) {
   userNamePara.textContent = userNameNode;
   userNameDiv.appendChild(userNamePara);
   // << User Name
-
 }
 
 
-// Clears Local Storage (postArray) of all User Input values
+// Clears Local Storage (postArray) of ALL User Input values (Blog Posts)
 function del() {
   localStorage.clear();
   ul.innerHTML = '';

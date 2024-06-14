@@ -251,8 +251,8 @@ footer {
 
 .dark-mode {
   background-image: linear-gradient(to bottom, rgb(64, 64, 64, 1.0), rgb(64, 64, 64, 0.75), rgb(64, 64, 64, 0.50));
-  color: white;
-  background-color: white; 
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255); 
 }
 
 .dark-mode a {
@@ -263,7 +263,7 @@ footer {
 
 .dark-mode a:hover {
   /* content: ""; */
-  color: white;
+  color: rgb(255, 255, 255);
   /* text-align: right; */
-  border-bottom: 1rem solid white;
+  border-bottom: 1rem solid rgb(255, 255, 255);
 }

@@ -20,9 +20,11 @@ const inputUserName = document.getElementById('username');
 const inputPostTitle = document.getElementById('posttitle');
 const inputPostContent = document.getElementById('postcontent');
 
+
 // Loads existing User Names from Local Storage to permanent Array (postsArray), else: empty Array
 let postsArray = localStorage.getItem('blogPosts1') ? JSON.parse(localStorage.getItem('blogPosts1')) : [];
 console.log(postsArray)
+
 
 // Creates <li> for each User Input Object, populates with User Input, and adds to <ul>
 postsArray.forEach(addPost);
@@ -51,18 +53,26 @@ function add() {
   newPost.postContent = inputPostContent.value;
   console.log(newPost.postContent);
   
-  // Adds new Blog Post inputs to postsArray
-  postsArray.push(newPost);
-  console.log(newPost)
+  if (newPost.userName && newPost.postTitle && newPost.postContent) {
+    // Adds new Blog Post inputs to postsArray
+    postsArray.push(newPost);
+    console.log(newPost)
 
-  // Adds values of postArray to Local Storage
-  localStorage.setItem('blogPosts1', JSON.stringify(postsArray));
+    // Adds values of postArray to Local Storage
+    localStorage.setItem('blogPosts1', JSON.stringify(postsArray));
   
-  // Passes newPost values to addPost() to be added to created HTML Element
-  addPost(newPost);
-  inputUserName.value = '';
-  inputPostTitle.value = '';
-  inputPostContent.value = '';
+    // Passes newPost values to addPost() to be added to created HTML Element
+    addPost(newPost);
+    inputUserName.value = '';
+    inputPostTitle.value = '';
+    inputPostContent.value = '';
 
-  console.log(postsArray);
+    console.log(postsArray);   
+    
+    // Redirects User to Blog Home Page on Submit
+    document.location.href="/";
+  } else {
+    alert("All Fields are Required. Please fully complete the Form.");
+    return false;
+  }
 }
