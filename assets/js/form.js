@@ -12,10 +12,7 @@ function navMenuDisplayForm() {
 
 
 // Reference: https://blog.logrocket.com/localstorage-javascript-complete-guide/
-
-// Defines Constants to hold User Input values until added to permanent Array (Local Storage) and Parent HTML Element
-
-// Parent HTML Element to which to add User Input
+// Defines Constants to hold User Input values until added to permanent Array (Local Storage) and Parent HTML Element to which to add User Input
 const ul = document.querySelector('ul');
 
 // Constants to hold User Input to be added to Local Storage
@@ -25,8 +22,9 @@ const inputPostContent = document.getElementById('postcontent');
 
 // Loads existing User Names from Local Storage to permanent Array (postsArray), else: empty Array
 let postsArray = localStorage.getItem('blogPosts1') ? JSON.parse(localStorage.getItem('blogPosts1')) : [];
+console.log(postsArray)
 
-// Creates <li> for each User Input Object, and adds to <ul>
+// Creates <li> for each User Input Object, populates with User Input, and adds to <ul>
 postsArray.forEach(addPost);
 function addPost(text) {
 
@@ -37,7 +35,8 @@ function addPost(text) {
   ul.appendChild(post);
 }
 
-// Attaches User Input to permanent Array calls addPost (adds User Input to HTML Element)
+
+// Attaches User Input to permanent Array, calls addPost (adds User Input to HTML Element)
 function add() {
   newPost = {}; // Temporary Object to hold Blog Post inputs (User Name, Post Title)
   console.log(newPost);
@@ -67,45 +66,3 @@ function add() {
 
   console.log(postsArray);
 }
-
-// Clears Local Storage (postArray) of all User Input values
-function del() {
-  localStorage.clear();
-  ul.innerHTML = '';
-  postsArray = [];
-}
-
-
-
-// THIS WORKS >> blogPosts
-// const ul = document.querySelector('ul');
-// const inputUserName = document.getElementById('username')
-// const inputPostTitle = document.getElementById('posttitle')
-
-// Loads existing User Names from Local Storage to postsArray, else: empty Array
-// let postsArray = localStorage.getItem('blogPosts') ? JSON.parse(localStorage.getItem('blogPosts')) : [];
-// console.log(postsArray)
-
-// Creates <li> for each User Name, and adds to <ul>
-// postsArray.forEach(addPost);
-// function addPost(text) {
-//   const post = document.createElement('li')
-//   post.textContent = text;
-//   ul.appendChild(post);
-// }
-
-// function add() {
-//   postsArray.push(inputUserName.value);
-//   localStorage.setItem('blogPosts', JSON.stringify(postsArray));
-//   addPost(inputUserName.value);
-//   inputUserName.value = '';
-
-//   console.log(postsArray);
-// }
-
-// function del() {
-//   localStorage.clear();
-//   ul.innerHTML = '';
-//   postsArray = [];
-// }
-// << THIS WORKS

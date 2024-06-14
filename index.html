@@ -7,13 +7,22 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
   <title>Blog | Meandering Brook</title>
 </head>
-<body>
+<body class="body">
   <!-- HEADER (Global) -->
   <header>
-    <!-- Waves LOGO -->
+    <!-- HEADER Icons -->
     <div>
+      <!-- LOGO Waves Icon (Home) -->
       <a href="javascript:void(0);" onclick="homeReload()">
-        <img class="headerimg" src="/assets/images/wave-blue-96.png" alt="Bright Blue Waves">
+        <img class="logoimg" src="/assets/images/wave-blue-96.png" alt="Bright Blue Waves">
+      </a>
+      <!-- MOON Icon: Dark Mode -->
+      <a href="javascript:void(0);" onclick="darkModeIndex()">
+        <img class="moonimg" id="moonimg" src="/assets/images/crescent-moon_64.png" alt="Blue Crescent Moon">
+      </a>
+      <!-- SUN Icon: Light Mode -->
+      <a href="javascript:void(0);" onclick="darkModeIndex()">
+        <img class="sunimg" id="sunimg" src="/assets/images/sun_96.png" alt="Sun Icon">
       </a>
     </div>
     <!-- HEADER Text -->
@@ -27,7 +36,7 @@
       <div id="site-links">
         <div>
           <a href="/form.html">
-            <p>New Post</p>
+            <h3>New Post</h3>
           </a>
         </div>
       </div>
@@ -44,26 +53,41 @@
     </div>
   </header>
 
+  <!-- CONTAINER Element for Blog Post Entries -->
   <main class="main">
+    <!-- CONTAINER Div for Blog Post Entries -->
     <div id="blogPosts">
-
-
     </div>
 
-
-    <h1>blah
-    </h1>
-    <section>
-      <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
-    </section>
+    <!-- BUTTON: Delete All -->
+    <br>
+    <div class="buttondiv">
+      <button class="buttons" type="submit" onclick="del()">Delete All</button>
+    </div>
   </main>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; <span id="year"></span> Chris Milazzo</p>
+    <section class="copyright">
+      <p>&copy; <span id="year"></span> Chris Milazzo</p>
+    </section>
+    <section class="footer-attr">
+      <h4>Portfolio:</h4>
+      <a href="https://meanderingbrook.github.io/02_Challenge_Professional-Portfolio-/">
+        <p>Chris Milazzo</p>
+      </a>
+    </section>
+    <section class="footer-attr">
+      <h4>Blog:</h4>
+      <p>Daily Thoughts</p>
+    </section>
+      <section class="footer-attr">
+      <h4>Email:</h4>
+      <p>kyle.a.chen@icloud.com</p>
+    </section>    
   </footer>
-  <script src="/assets/js/logic.js"></script>
   <script src="/assets/js/blog.js"></script> 
-  <script>$(document).ready(addPost())</script>
+  <script src="/assets/js/logic.js"></script>
+  <script>$(document).ready(addPost) </script>
 </body>
 </html>

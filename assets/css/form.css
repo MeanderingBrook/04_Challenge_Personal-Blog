@@ -1,12 +1,14 @@
 /* FORM */
 
-.header-form {
-  margin-bottom: 2vh;
-  text-align: center;
-  color: rgb(0, 0, 128);
+input {
+  font-size: 10pt;
 }
 
-.main-form {
+textarea {
+  font-size: 10pt;
+}
+
+.form {
   width: 50%;
   margin: auto;
   padding: 25px;
@@ -14,52 +16,48 @@
   border-radius: 10px;
   /* background-color: rgb(255, 255, 255,0.80); */
   background-image: linear-gradient(to bottom, rgba(255,255,255,1.0), rgba(255,255,255,0.90), rgba(255,255,255,0.80), rgba(255,255,255,0.70));
+  color: rgb(0, 0, 128, 0.75);
 }
 
-.main-form label {
+.form h2 {
+  margin-bottom: 2vh;
+  text-align: center;
+}
+
+.form label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
-  color: rgb(0, 0, 128);
 }
 
-.main-form input,
-.main-form textarea {
+.form input,
+.form textarea {
   margin-top: 0px;
   margin-bottom: 30px;
-  border: 1px solid rgb(38, 151, 192);
+  /* border: 1px solid rgb(38, 151, 192); */
   border-radius: 5px;
+  outline: 0;  /* Removes Input Field Outline */
+  border-width: 0 0 2px;
+  border-color: rgb(0, 0, 128, 0.75);
   box-sizing: border-box;
   width: 100%;
   padding-top: 1vh;
   padding-bottom: 1vh;
   padding-left: 1vw;
   padding-right: 1vw;
-
-  color: rgb(0, 0, 128);
 }
 
-.main-form input {
+.form input {
   min-height: 3em;
 }
 
-.main-form textarea {
+.form textarea {
   min-height: 20vh;
 }
 
-.main-form button {
-  border: 1px solid white; 
-  border-radius: 5px; 
-  width: 25%;
-  padding: 12px; 
-  background-color: rgb(38, 151, 192); 
-  cursor: pointer;
-  font-size: 16px;
-  color: rgb(255, 255, 255);    
-}
-
-.buttondiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.dark-mode {
+  background-image: linear-gradient(to bottom, rgb(64, 64, 64, 1.0), rgb(64, 64, 64, 0.75), rgb(64, 64, 64, 0.50));
+  /* background-color: rgb(255, 255, 255);  */
+  border-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }

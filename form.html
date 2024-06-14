@@ -7,13 +7,22 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/form.css">
   <title>Post | Meandering Brook</title>
 </head>
-<body>
+<body class="body">
   <!-- HEADER (Global) -->
   <header>
-    <!-- Waves LOGO -->
+    <!-- HEADER Icons -->
     <div>
+      <!-- LOGO Waves Icon (Home) -->
       <a href="/index.html">
-        <img class="headerimg" src="/assets/images/wave-blue-96.png" alt="Bright Blue Waves">
+        <img class="logoimg" src="/assets/images/wave-blue-96.png" alt="Bright Blue Waves">
+      </a>
+      <!-- MOON Icon: Dark Mode -->
+      <a href="javascript:void(0);" onclick="darkModeForm()">
+        <img class="moonimg" id="moonimg" src="/assets/images/crescent-moon_64.png" alt="Blue Crescent Moon">
+      </a>
+      <!-- SUN Icon: Light Mode -->
+      <a href="javascript:void(0);" onclick="darkModeForm()">
+        <img class="sunimg" id="sunimg" src="/assets/images/sun_96.png" alt="Sun Icon">
       </a>
     </div>
     <!-- HEADER Text -->
@@ -22,11 +31,12 @@
         Meandering Brook: A Personal Blog
       </h1>
     </div>
+    <!-- NAV MENU Link -->
     <div class="site-nav">
       <div id="site-links">
         <div>
           <a href="/index.html">
-            <p>Home</p>
+            <h3>Home</h3>
           </a>
         </div>
       </div>
@@ -44,10 +54,10 @@
   </header>
 
   <main>
-    <section class="main-form"> <!-- class="alert" -->
-      <h2 class="header-form">Record Your Meandering Thoughts...</h2>
+    <!-- CONTAINER Div for User Input Form -->
+    <section class="form"> 
+      <h2>Record Your Meandering Thoughts...</h2>
         <form id="post">
-          
           <!-- USER NAME Input Field -->
           <div>  
             <label for="username">User Name</label>
@@ -57,7 +67,7 @@
                    placeholder="  Enter your User Name">
           </div>
           
-          <!-- POST TITLE Input Field -->
+          <!-- TITLE Input Field -->
           <div>
             <label for="posttitle">Post Title</label>
             <input type="text" 
@@ -67,31 +77,47 @@
                    placeholder="  Enter your Blog Title (Maximum Characters: 100)">
           </div>
           
-          <!-- POST CONTENT Input Field -->
+          <!-- CONTENT Input Field -->
           <div>
             <label for="postcontent">Post Content</label>
             <textarea name="postcontent" id="postcontent" maxlength="5000" placeholder="  Enter your Blog Post (Maximum Characters: 5,000)"></textarea>
           </div>
 
-          <!-- SUBMIT Button -->          
+          <!-- BUTTON: Submit User Input to Local Storage -->          
           <div class="buttondiv">
-            <button type="submit" onclick="add()">Submit </button>
-            <button type="submit" onclick="del()">Delete All</button>
+            <button class="buttons" type="submit" onclick="add()">Submit </button>
+            <!-- <button type="submit" onclick="del()">Delete All</button> --> <!-- MOVED TO INDEX.HTML -->
           </div>
         </form>
     <section>
 
+    <!-- TEMPORARY OBJECT TO HOLD DATA ENTRIES -->
     <section class="list">
       <ul></ul>
     </section>
-
-
   </main>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; <span id="year"></span> Chris Milazzo</p>
+    <section class="copyright">
+      <p>&copy; <span id="year"></span> Chris Milazzo</p>
+    </section>
+    <section class="footer-attr">
+      <h4>Portfolio:</h4>
+      <a href="https://meanderingbrook.github.io/02_Challenge_Professional-Portfolio-/">
+        <p>Chris Milazzo</p>
+      </a>
+    </section>
+    <section class="footer-attr">
+      <h4>Blog:</h4>
+      <p>Daily Thoughts</p>
+    </section>
+      <section class="footer-attr">
+      <h4>Email:</h4>
+      <p>kyle.a.chen@icloud.com</p>
+    </section>    
   </footer>
   <script src="/assets/js/form.js"></script>
+  <script src="/assets//js/logic.js"></script>
 </body>
 </html>

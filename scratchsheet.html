@@ -7,3 +7,137 @@ background: linear-gradient(to right bottom, rgba(255, 255, 255, 1) 0% /*top-lef
 
 background: linear-gradient(to right bottom, rgba(255, 255, 255, 1) 0% /*top-left color*/, rgba(119, 212, 255, 0.121) 50% /*middle color*/, rgba(119, 212, 255, 0.5) 100% /*bottom-right color*/),
             linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1))/*"faked" black background make sure to add last or it will appear before the transparent/colored layer*/;
+
+
+            
+// THIS WORKS >> blogPosts
+// const ul = document.querySelector('ul');
+// const inputUserName = document.getElementById('username')
+// const inputPostTitle = document.getElementById('posttitle')
+
+// Loads existing User Names from Local Storage to postsArray, else: empty Array
+// let postsArray = localStorage.getItem('blogPosts') ? JSON.parse(localStorage.getItem('blogPosts')) : [];
+// console.log(postsArray)
+
+// Creates <li> for each User Name, and adds to <ul>
+// postsArray.forEach(addPost);
+// function addPost(text) {
+//   const post = document.createElement('li')
+//   post.textContent = text;
+//   ul.appendChild(post);
+// }
+
+// function add() {
+//   postsArray.push(inputUserName.value);
+//   localStorage.setItem('blogPosts', JSON.stringify(postsArray));
+//   addPost(inputUserName.value);
+//   inputUserName.value = '';
+
+//   console.log(postsArray);
+// }
+
+// function del() {
+//   localStorage.clear();
+//   ul.innerHTML = '';
+//   postsArray = [];
+// }
+// << THIS WORKS
+
+
+/* .buttondiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  border: 1px solid white; 
+  border-radius: 5px; 
+  width: 25%;
+  padding: 12px; 
+  background-color: rgb(38, 151, 192); 
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(255, 255, 255);    
+} */
+
+
+// THIS WORKS >> 
+// Load Blog Posts from Local Storage on load >>
+
+// Set Constant for target HTML Element to which Blog Posts will be added
+// const targetDiv = document.getElementById('blogPosts')
+
+// Loads existing User Names from Local Storage to permanent Array (postsArray), else: empty Array
+// let postsArray = localStorage.getItem('blogPosts1') ? JSON.parse(localStorage.getItem('blogPosts1')) : [];
+
+// Creates <li> for each User Input Object, and adds to <ul>
+// postsArray.forEach(addPost);
+// function addPost(text) {
+
+//   let textString = JSON.stringify(text);
+
+//   const post = document.createElement('li')
+//   post.textContent = textString;
+//   targetDiv.appendChild(post);
+// }
+// THIS WORKS <<
+
+
+// TRIAL: THIS WORKS TOO >> 
+// Load Blog Posts from Local Storage on load >>
+
+// Set Constant for target HTML Element to which Blog Posts will be added
+// const targetDiv = document.getElementById('blogPosts')
+
+// Loads existing User Names from Local Storage to permanent Array (postsArray), else: empty Array
+// let postsArray = localStorage.getItem('blogPosts1') ? JSON.parse(localStorage.getItem('blogPosts1')) : [];
+
+// Creates <div> for each User Input Object, and adds to <ul>
+// postsArray.forEach(addPost);
+// function addPost(text) {
+
+//   let textString = JSON.stringify(text);
+//   console.log(textString);
+
+//   const post = document.createElement('div')
+//   post.classList.add('card');
+//   post.textContent = textString;
+//   targetDiv.appendChild(post);
+// }
+// << TRIAL: THIS WORKS TOO
+
+
+
+// SUPERSEDED CODE
+
+  // const cardsText = document.querySelectorAll('.titleHeader, .contentHeader, .userHeader');
+
+  // for (let i = 0; i < cardsText.length; i++) {
+  //   if (cardsText[i].style.color !== 'white') {
+  //     cardsText[i].style.color = 'white';
+  //   } else {
+  //     cardsText[i].style.color = 'aqua';
+  //   }
+  // };
+
+
+  // const imageElement = document.body.style.backgroundSize = auto;
+  // if (imageElement === 'auto') {
+  //   imageElement = '0 0';
+  // } else {
+  //   imageElement = 'auto';
+  // }
+
+  // if (document.body.style.backgroundSize === 'auto') {
+  //   document.body.style.backgroundSize = '';
+  // } else {
+  //   document.body.style.backgroundSize = 'auto';
+  // }
+
+  //  var bodyele = document.getElementById('body');
+  //  bodyele.style.background = 'none';
+
+  // TRY SETTING BACKGROUND IMAGE TO  = ' ' !!!!!!!
+
+
