@@ -31,7 +31,9 @@ function addPost(text) {
 
   const post = document.createElement("li");
   post.textContent = textString;
-  ul.appendChild(post);
+
+  // DEPRECATED: Development Tool Only to show new Posts on Form Page
+  // ul.appendChild(post);
 }
 
 // Attaches User Input to permanent Array, calls addPost (adds User Input to HTML Element)
@@ -63,7 +65,8 @@ function add() {
     inputPostTitle.value = "";
     inputPostContent.value = "";
 
-    console.log(postsArray);
+    // DEPRECATED: Development Tool Only to show new Posts on in Console
+    // console.log(postsArray);
 
     // Redirects User to Blog Home Page on Submit
     document.location.href = "./";
