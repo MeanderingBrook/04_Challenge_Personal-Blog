@@ -16,18 +16,19 @@ function darkModeIndex() {
   const buttonsEl = document.querySelector('.buttons');
   buttonsEl.classList.toggle('dark-mode');
 
+  // Applies Dark Mode to page Footer
+  const footerEl = document.querySelector('footer');
+  footerEl.classList.toggle('dark-mode');  
+
+  // Applies Dark Mode to page Footer Copyright
+  const footerCoprEl = document.querySelector('.copyright');
+  footerCoprEl.classList.toggle('dark-mode');
+
   // Applies Dark Mode to page Post Elements
   const cards = document.querySelectorAll('.card');
   for (let i = 0; i < cards.length; i++) {
     cards[i].classList.toggle('dark-mode');
 
-  // Applies Dark Mode to page Footer
-  const footerEl = document.querySelector('footer');
-  footerEl.classList.toggle('dark-mode');
-
-  // Applies Dark Mode to page Footer Copyright
-  const footerCoprEl = document.querySelector('.copyright');
-  footerCoprEl.classList.toggle('dark-mode');
 
     // THIS OVERRIDES CSS AND CANT CHANGE DIRECTLY IN CSS FILE!!!!
     // if (cards[i].style.backgroundColor !== 'rgb(128, 128, 128)') {
@@ -67,9 +68,6 @@ function darkModeForm() {
   // navLinkEl.classList.toggle('dark-mode');
   // ISNT NECESSARY
   // navLinkEl.classList.toggle('.dark-mode a');
-
-  // const navLinkHoverEl = document.querySelector('.site-nav a:hover');
-
 
   // Applies Dark Mode to page Form (Post) Elements
   const formEl = document.querySelector('.form');

@@ -10,6 +10,7 @@ main {
 
 
 /* JavaScript-Generated HTML Styles */
+/* CARDS for Individual Blog Posts on Home Page */
 .card {
   margin: 1vh auto;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -29,7 +30,7 @@ main {
   margin-bottom: 1vh;
 }
 
-#postTitleDiv {
+#titleDiv {
   margin-bottom: 4vh;
   border-bottom: 1px solid rgb(0, 0, 128);
   padding-bottom: 1.50vh;
@@ -38,7 +39,7 @@ main {
 /* .titleHeader {
 } */
 
-#postContentDiv {
+#contentDiv {
   margin-bottom: 4.0vh;
   min-height: 10vh;
   border-bottom: 1px solid rgb(0, 0, 128,0.25);
@@ -63,8 +64,10 @@ main {
 /* .userHeader {
 } */
 
+
+/* DARK MODE */
+
 .dark-mode {
   background-image: linear-gradient(to bottom, rgb(64, 64, 64, 1.0), rgb(64, 64, 64, 0.75), rgb(64, 64, 64, 0.50));
   color: white;
 }
-
