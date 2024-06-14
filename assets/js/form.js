@@ -4,39 +4,35 @@ function navMenuDisplayForm() {
 
   if (x.style.display === "block") {
     x.style.display = "none";
-
   } else {
     x.style.display = "block";
   }
 }
 
-
 // Reference: https://blog.logrocket.com/localstorage-javascript-complete-guide/
 // Defines Constants to hold User Input values until added to permanent Array (Local Storage) and Parent HTML Element to which to add User Input
-const ul = document.querySelector('ul');
+const ul = document.querySelector("ul");
 
 // Constants to hold User Input to be added to Local Storage
-const inputUserName = document.getElementById('username');
-const inputPostTitle = document.getElementById('posttitle');
-const inputPostContent = document.getElementById('postcontent');
-
+const inputUserName = document.getElementById("username");
+const inputPostTitle = document.getElementById("posttitle");
+const inputPostContent = document.getElementById("postcontent");
 
 // Loads existing User Names from Local Storage to permanent Array (postsArray), else: empty Array
-let postsArray = localStorage.getItem('blogPosts1') ? JSON.parse(localStorage.getItem('blogPosts1')) : [];
-console.log(postsArray)
-
+let postsArray = localStorage.getItem("blogPosts1")
+  ? JSON.parse(localStorage.getItem("blogPosts1"))
+  : [];
+console.log(postsArray);
 
 // Creates <li> for each User Input Object, populates with User Input, and adds to <ul>
 postsArray.forEach(addPost);
 function addPost(text) {
-
   let textString = JSON.stringify(text);
 
-  const post = document.createElement('li')
+  const post = document.createElement("li");
   post.textContent = textString;
   ul.appendChild(post);
 }
-
 
 // Attaches User Input to permanent Array, calls addPost (adds User Input to HTML Element)
 function add() {
@@ -52,25 +48,25 @@ function add() {
 
   newPost.postContent = inputPostContent.value;
   console.log(newPost.postContent);
-  
+
   if (newPost.userName && newPost.postTitle && newPost.postContent) {
     // Adds new Blog Post inputs to postsArray
     postsArray.push(newPost);
-    console.log(newPost)
+    console.log(newPost);
 
     // Adds values of postArray to Local Storage
-    localStorage.setItem('blogPosts1', JSON.stringify(postsArray));
-  
+    localStorage.setItem("blogPosts1", JSON.stringify(postsArray));
+
     // Passes newPost values to addPost() to be added to created HTML Element
     addPost(newPost);
-    inputUserName.value = '';
-    inputPostTitle.value = '';
-    inputPostContent.value = '';
+    inputUserName.value = "";
+    inputPostTitle.value = "";
+    inputPostContent.value = "";
 
-    console.log(postsArray);   
-    
+    console.log(postsArray);
+
     // Redirects User to Blog Home Page on Submit
-    document.location.href="/";
+    document.location.href = "./";
   } else {
     alert("All Fields are Required. Please fully complete the Form.");
     return false;
