@@ -68,8 +68,8 @@ function add() {
     // DEPRECATED: Development Tool Only to show new Posts on in Console
     // console.log(postsArray);
 
-    // Redirects User to Blog Home Page on Submit
-    document.location.href = "./";
+    // Redirects User to Blog (Aggregation) Page on Submit
+    document.location.href = "./blog.html";
   } else {
     alert("All Fields are Required. Please fully complete the Form.");
     return false;

@@ -1,6 +1,6 @@
 // Logo Page Reload Function
 function homeReload() {
-  location.reload();
+  document.location.href = "./index.html";
 }
 
 // Nav Menu Function

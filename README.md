@@ -98,7 +98,9 @@ N / A
 
 ## Tests
 
-N / A
+JavaScript-created Home Page presentation of Blog Post entries as <ul> to confirm postsArray update; see form.js, Line 35
+
+`console.log` output of new Blog Posts, and postArray on Blog Post submittal; see form.js, Line 68
 
 
 ## GitHub Pages Location
