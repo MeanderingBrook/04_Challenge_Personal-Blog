@@ -106,15 +106,4 @@ function del() {
   localStorage.clear();
   ul.innerHTML = "";
   itemsArray = [];
-  // location.reload();
-  // document.location.href = "./";
-  // this.location.reload();
-
-  // location.replace(location.href);
-
-  // window.location = "./";
-  // window.location.reload();
-
-  // document.location.href = "./";
-  // document.location.reload();
 }
